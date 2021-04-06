@@ -30,7 +30,6 @@ variable "hao_mgmt_rules" {
     destination_port_ranges     = "string"
     destination_address_prefix  = "string"
     description                 = "string"
-
   )
   description = "Open SSH to Hub management network"
 }
