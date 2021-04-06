@@ -42,7 +42,6 @@ variable "destination_port_ranges" {
   type        = string
   description = "Port range for destination IP"
 }
-
 variable "destination_address_prefix" {
   type        = string
   description = "Destination address Prefix"
