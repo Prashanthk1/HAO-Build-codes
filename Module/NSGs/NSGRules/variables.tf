@@ -19,17 +19,17 @@ variable "hao_mgmt_nsg_name" {
 }
 
 variable "hao_mgmt_rules" {
-  type = object (
-    name                        = "string"
-    priority                    = "string"
-    direction                   = "string"
-    access                      = "string"
-    protocol                    = "string"
-    source_port_ranges          = "string"
-    source_address_prefix       = "string"
-    destination_port_ranges     = "string"
-    destination_address_prefix  = "string"
-    description                 = "string"
-  )
+  type = list(object({
+    name                        = string
+    priority                    = string
+    direction                   = string
+    access                      = string
+    protocol                    = string
+    source_port_ranges          = string
+    source_address_prefix       = string
+    destination_port_ranges     = string
+    destination_address_prefix  = string
+    description                 = string
+  }))
   description = "Open SSH to Hub management network"
 }
